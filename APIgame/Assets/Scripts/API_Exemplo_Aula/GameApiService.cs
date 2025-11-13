@@ -8,7 +8,7 @@ using UnityEngine;
 public class GameApiService
 {
     private readonly HttpClient httpClient;
-    private const string BASE_URL = "https://68f95ab1deff18f212b951b3.mockapi.io";
+    private const string BASE_URL = "http://localhost:5039/usuariojogo";
 
 
     public GameApiService()
@@ -25,7 +25,7 @@ public class GameApiService
     {
         try
         {
-            string url = $"{BASE_URL}/usuariojogo";
+            string url = $"{BASE_URL}";
             Debug.Log($"GET: {url}");
             
             HttpResponseMessage response = await httpClient.GetAsync(url);
@@ -54,7 +54,7 @@ public class GameApiService
     {
         try
         {
-            string url = $"{BASE_URL}/usuariojogo/{id}";
+            string url = $"{BASE_URL}/{id}";
             Debug.Log($"GET: {url}");
             
             HttpResponseMessage response = await httpClient.GetAsync(url);
@@ -80,7 +80,7 @@ public class GameApiService
     {
         try
         {
-            string url = $"{BASE_URL}/usuariojogo/{id}";
+            string url = $"{BASE_URL}/{id}";
             Debug.Log($"PUT: {url}");
             
             string json = JsonUtility.ToJson(jogador);
@@ -110,7 +110,7 @@ public class GameApiService
     {
         try
         {
-            string url = $"{BASE_URL}/usuariojogo";
+            string url = $"{BASE_URL}";
             Debug.Log($"POST: {url}");
             
             string json = JsonUtility.ToJson(jogador);

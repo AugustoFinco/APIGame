@@ -18,9 +18,9 @@ public class TesteAPI : MonoBehaviour
         Jogador novoJogador1 = new Jogador();
         novoJogador1.Item = p.Item;
         novoJogador1.Vida = p.Vida;
-        novoJogador1.PosicaoX = p.posX;
-        novoJogador1.PosicaoY = p.posY;
-        novoJogador1.PosicaoZ = p.posZ;
+        novoJogador1.posX = p.posX;
+        novoJogador1.posY = p.posY;
+        novoJogador1.posZ = p.posZ;
 
         //adicionar jogador na API
         Jogador criadoJogador1 = await apiService.CriarJogador(novoJogador1);
@@ -48,9 +48,9 @@ public class TesteAPI : MonoBehaviour
         Jogador novoJogador1 = new Jogador();
         novoJogador1.Vida = p.Vida;
         novoJogador1.Item = p.Item;
-        novoJogador1.PosicaoX = p.posX;
-        novoJogador1.PosicaoY = p.posY;
-        novoJogador1.PosicaoZ = p.posZ;
+        novoJogador1.posX = p.posX;
+        novoJogador1.posY = p.posY;
+        novoJogador1.posZ = p.posZ;
 
         //adicionar jogador na API
         Jogador jogador1End = await apiService.CriarJogador(novoJogador1);
